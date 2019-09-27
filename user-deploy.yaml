@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: usermicroservice
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: usermicroservice
+    spec:
+      containers:
+      - image: eatgreet.azurecr.io/usermicroservice
+        name: usermicroservice
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+        imagePullPolicy: Always
+        ports:
+        - name: user-port
+          containerPort: 8080
+status: {}
