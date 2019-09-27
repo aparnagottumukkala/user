@@ -10,7 +10,7 @@ spec:
         app: usermicroservice
     spec:
       containers:
-      - image: eatgreet.azurecr.io/usermicroservice
+      - image: rajagupt/user
         name: usermicroservice
         resources:
           limits:
