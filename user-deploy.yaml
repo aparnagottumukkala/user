@@ -10,7 +10,7 @@ spec:
         app: usermicroservice
     spec:
       containers:
-      - image: rajagupt/user
+      - image: rajagupt/user:2
         name: usermicroservice
         resources:
           limits:
